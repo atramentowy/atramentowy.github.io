@@ -1,0 +1,209 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	/* background-image: url("images/background.jpeg");
+	background-size: cover; */
+	color: white;
+
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+
+	min-height: 100vh;
+    margin: 0;
+    padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+hr {
+	background-color: white;
+	border: 0;
+    border-top: 1px solid white;
+}
+
+.navbar {
+    position: fixed;
+
+    top: 40px;
+    left: 40px;
+    right: 40px;
+
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+
+    overflow: hidden;
+
+    --x: 50%;
+    --y: 50%;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+
+    background: radial-gradient(
+        120px circle at var(--x) var(--y),
+        #6fb8ff,
+        transparent 70%
+    );
+
+    /* pokazuje gradient tylko na obramowaniu */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+
+	transition: 0.05s linear;
+}
+
+.name {
+	display: flex;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+
+.name:hover {
+	color: lightgrey;
+}
+
+.dot {
+    /* width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    display: inline-block; */
+
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.menu {
+	align-items: center;
+    display: flex;
+    gap: 50px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: white;
+
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.menu button {
+	background: none;
+	border: none;
+	color: lightgrey;
+	cursor: pointer;
+}
+
+.menu button:hover {
+	color: white;
+}
+
+main {
+	flex: 1;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 150px;
+	padding-bottom: 40px;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    /* padding: 20px; */
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+
+	display: flex;
+    flex-direction: column;
+
+    /* background: rgba(255,255,255,0.05); */
+    border-radius: 8px;
+
+    /* height: 120px; */
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+	padding: 10px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    --x: 50%;
+    --y: 50%;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+
+    background: radial-gradient(
+        120px circle at var(--x) var(--y),
+        #6fb8ff,
+        transparent 70%
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+footer {
+    background: #111;
+    color: lightgrey;
+    text-align: center;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
