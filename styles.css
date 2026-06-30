@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background-color: black;
+	background-color: #111;
 	/* background-image: url("images/background.jpeg");
 	background-size: cover; */
 	color: white;
@@ -28,8 +28,8 @@ hr {
     position: fixed;
 
     top: 40px;
-    left: 40px;
-    right: 40px;
+    left: 60px;
+    right: 60px;
 
     height: 50px;
 
@@ -53,6 +53,18 @@ hr {
 
     --x: 50%;
     --y: 50%;
+
+	z-index: 1000;
+}
+
+@keyframes sweep {
+    from {
+        left: -150%;
+    }
+
+    to {
+        left: 150%;
+    }
 }
 
 .navbar::before {
@@ -80,6 +92,29 @@ hr {
 	transition: 0.05s linear;
 }
 
+.navbar::after {
+    content: "";
+    position: absolute;
+
+    top: -100%;
+    left: -30%;
+
+    width: 50px;
+    height: 300%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    filter: blur(20px);
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+
 .name {
 	display: flex;
 	align-items: center;
@@ -87,17 +122,7 @@ hr {
 	font-weight: bold;
 }
 
-.name:hover {
-	color: lightgrey;
-}
-
 .dot {
-    /* width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    display: inline-block; */
-
     animation: blink 1.5s infinite;
 }
 
@@ -121,19 +146,28 @@ hr {
 
 .menu a:hover {
     color: white;
-
+	font-weight: bold;
 	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
-.menu button {
+.btn-menu button {
 	background: none;
 	border: none;
 	color: lightgrey;
 	cursor: pointer;
 }
 
-.menu button:hover {
+.btn-menu :hover {
 	color: white;
+	font-weight: bold;
+}
+
+.btn-menu {
+	display: flex;
+	gap: 5px;
+	color: lightgrey;
+    text-decoration: none;
+	background: none;
 }
 
 main {
@@ -170,7 +204,7 @@ main {
     /* justify-content: center; */
     /* align-items: center; */
 
-	padding: 10px;
+	padding: 5px;
 
     border: 1px solid rgba(255,255,255,0.1);
 
@@ -199,6 +233,57 @@ main {
 
     pointer-events: none;
 }
+
+.project img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    display: block;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) translateX(50px);
+        opacity: 0;
+    }
+}
+
+.particles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+
+    animation: float 10s infinite linear;
+}
+
+.particles span:nth-child(1) { left: 10%; animation-duration: 12s; }
+.particles span:nth-child(2) { left: 20%; animation-duration: 8s; }
+.particles span:nth-child(3) { left: 30%; animation-duration: 10s; }
+.particles span:nth-child(4) { left: 40%; animation-duration: 14s; }
+.particles span:nth-child(5) { left: 60%; animation-duration: 9s; }
+.particles span:nth-child(6) { left: 75%; animation-duration: 11s; }
+.particles span:nth-child(7) { left: 90%; animation-duration: 13s; }
 
 footer {
     background: #111;
