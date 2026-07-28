@@ -1,15 +1,34 @@
-const navbar = document.querySelector(".navbar");
+const items = document.querySelectorAll('.projects li');
+const tooltip = document.getElementById('tooltip');
+const tooltipImg = document.getElementById('tooltipImg');
+const tooltipText = document.getElementById('tooltipText');
 
-document.addEventListener("mousemove", (e) => {
-    const elements = document.querySelectorAll(".navbar, .project");
+items.forEach(item => {
+    item.addEventListener('mouseenter', function(e) {
+        const imgSrc = this.dataset.img;
+        const text = this.dataset.tooltip;
+        
+        if (imgSrc) tooltipImg.src = imgSrc;
+        if (text) tooltipText.textContent = text;
+        
+        tooltip.style.display = 'block';
 
-    elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        el.style.setProperty("--x", x + "px");
-        el.style.setProperty("--y", y + "px");
+      	const tooltipHeight = tooltip.offsetHeight || 200;
+        tooltip.style.left = (e.clientX + 20) + 'px';
+        tooltip.style.top = (e.clientY - tooltipHeight - 20) + 'px';
+        // tooltip.style.left = (e.clientX + 20) + 'px';
+        // tooltip.style.top = (e.clientY + 10) + 'px';
+    });
+    
+    item.addEventListener('mousemove', function(e) {
+        // tooltip.style.left = (e.clientX + 20) + 'px';
+        // tooltip.style.top = (e.clientY + 10) + 'px';
+        const tooltipHeight = tooltip.offsetHeight || 200;
+        tooltip.style.left = (e.clientX + 20) + 'px';
+        tooltip.style.top = (e.clientY - tooltipHeight - 20) + 'px';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
     });
 });

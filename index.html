@@ -2,84 +2,155 @@
 <html lang="pl-PL">
 <head>
   <meta charset="UTF-8">
-  <title>atramentowy.github.io</title>
+  <title>atramentowy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-
-  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/favicon.png">
 </head>
 <body>
   <header>
+    <a href="#" class="name">atramentowy.github.io</a>
     <nav class="navbar">
-      <div class="name"><span class="dot">.</span>atramentowy</div>
       <ul class="menu">
-        <li><a href="#home">/ Home</a></li>
-        <li><a href="#projects">/ Projekty</a></li>
-        <li><a href="#about">/ O mnie</a></li>
-        <li><a href="#contact">/ Kontakt</a></li>
-      </ul>
-      <ul class="btn-menu">
-        <button id="themeBtn" class="theme-btn">LIGHT MODE</button>
-        <button id="langBtn" class="lang-btn">PL/ENG</button>
+        <li><a href="#about">O mnie</a></li>
+        <li><a href="#links">Linki</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="https://github.com/atramentowy" class="github">Github</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <!-- <section>
-      <img src="images/background.jpeg" alt="Background Image" class="background-image">
+<!--     <section>    
+      <h2>Witaj</h2>
+      <p>12/12/12</p>
+      <hr>
+      <p>To jest treść główna.</p>
+      <br>
+      <hr>
     </section> -->
-    <section id="projects">
-      <div class="projects">
-        <div class="project">
-          <img src="images/background.jpeg" alt="Projekt 1">
-          <h2>Projekt 1</h2>
-          <p>testowy opis</p>
-        </div>
-        <div class="project">
-          <img src="images/background.jpeg" alt="Projekt 2">
-          <h2>Projekt 2</h2>
-          <p>testowy opis</p>
-        </div>
-        <div class="project">
-          <img src="images/background.jpeg" alt="Projekt 3">
-          <h2>Projekt 3</h2>
-          <p>testowy opis</p>
-        </div>
-        <div class="project">
-          <img src="images/background.jpeg" alt="Projekt 4">
-          <h2>Projekt 4</h2>
-          <p>testowy opis</p>
-        </div>
-    </div>
-    </section>
-    <section id="home">
-      <h1>Witaj!</h1>
+    <section>
+      <h2>O mnie</h2>
+      <hr>
+      <!-- <img src="images/background.jpeg"> -->
       <p>Jestem studentem informatyki i pasjonatem programowania. Na tej stronie znajdziesz informacje o moich projektach oraz kontakt do mnie.</p>
     </section>
-    <section id="projecdddts">
-      <h2>Moje projekty</h2>
-      <p>Poniżej znajdziesz kilka projektów, nad którymi pracowałem:</p>
+
+    <div class="projects">
+        <h2>Projekty</h2>
+        <hr>
+        
+        <!-- Projekt 1 -->
+        <div class="project">
+            <div class="thumbnail">
+                <img src="images/background.jpeg?text=A" alt="ATR">
+            </div>
+            <div class="content">
+                <a href="#" class="title">atramentowy.github.io</a>
+                <p class="date">28/07/2026</p>
+                <p class="description">Portfolio website built with HTML, CSS and JavaScript.</p>
+            </div>
+        </div>
+        
+        <!-- Projekt 2 -->
+        <div class="project">
+            <div class="thumbnail">
+                <img src="images/background.jpeg" alt="CC">
+            </div>
+            <div class="content">
+                <a href="#" class="title">CCraft</a>
+                <p class="date">28/07/2026</p>
+                <p class="description">Test test test test.</p>
+            </div>
+        </div>
+        
+        <!-- Projekt 3 -->
+        <div class="project">
+            <div class="thumbnail">
+                <img src="images/background.jpeg?text=W" alt="WB">
+            </div>
+            <div class="content">
+                <a href="#" class="title">WaffleBot</a>
+                <p class="date">00/00/0000</p>
+                <p class="description">Test test test test.</p>
+            </div>
+        </div>
+        
+        <!-- Projekt 4 -->
+        <div class="project">
+            <div class="thumbnail">
+                <img src="images/background.jpeg?text=H" alt="HD">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Helpdesk App</a>
+                <p class="date">00/00/0000</p>
+                <p class="description">Test test test test.</p>
+            </div>
+        </div>
+        
+        <!-- Projekt 5 -->
+        <div class="project">
+            <div class="thumbnail">
+                <img src="images/background.jpeg?text=D" alt="DDPS">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Distributed Data Processing System</a>
+                <p class="date">00/00/0000</p>
+                <p class="description">Test test test test.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="links" id="links">
+      <h2>Linki</h2>
+      <hr>
+      <ul>
+          <li>28/07/2026: <a href="">atramentowy.github.io</a></li>
+          <li>28/07/2026: <a href="">CCraft</a></li>
+          <li>00/00/0000: <a href="">WaffleBot</a></li>
+          <li>00/00/0000: <a href="">Helpdesk App</a></li>
+          <li>00/00/0000: <a href="">Distributed Data Processing System</a></li>
+      </ul>
+      <ul class="images">
+        <li data-tooltip="Helpdesk App - support system" data-img="https://via.placeholder.com/200x150/6a4a2a/white?text=Helpdesk">
+      </ul>
     </section>
+
+    <section>
+      <br>
+      <hr>
+      <p class="center">***</p>
+    </section>
+    <div class="tooltip" id="tooltip">
+        <img id="tooltipImg" src="" alt="">
+        <img src="images/background.jpeg" alt="Podgląd">
+        <div class="text" id="tooltipText"></div>
+    </div>
     <section>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
-    <div class="particles">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </main>
   <footer>
-    <p>&copy; 2026 Paweł Pyrak. Wszelkie prawa zastrzeżone.</p>
+    <hr>
+    <ul class="menu">
+      <li>
+        <p><i> 2026 &copy; Paweł Pyrak Wszelkie prawa zastrzeżone. </i></p>
+      </li>
+      <li>
+        <a class="icon" href="gmail" target="_blank">
+          <img src="icons/gmail.svg" alt="Gmail" >
+        </a>
+        <a class="icon" href="" target="_blank">
+          <img src="icons/discord.svg" alt="Discord">
+        </a>
+        <a class="icon" href="https://github.com/atramentowy" target="_blank">
+          <img src="icons/github.svg" alt="GitHub">
+        </a>
+      </li>
+    </ul>
   </footer>
   <script src="script.js"></script>
 </body>
