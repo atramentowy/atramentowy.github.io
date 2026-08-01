@@ -10,128 +10,110 @@
 </head>
 <body>
   <header>
-    <a href="#" class="name">atramentowy.github.io</a>
+    <a href="index.html" class="name">atramentowy.github.io</a>
     <nav class="navbar">
       <ul class="menu">
-        <li><a href="#about">O mnie</a></li>
-        <li><a href="#links">Linki</a></li>
-        <li><a href="#projects">Projekty</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#" onclick="showDiv('about')">O mnie</a></li>
+        <li><a href="#" onclick="showDiv('projects')">Projekty</a></li>
+        <li><a href="#" onclick="showDiv('resources')">Inne</a></li>
+        <!-- <li><a href="#" onclick="showDiv('contact')">Kontakt</a></li> -->
         <li><a href="https://github.com/atramentowy" class="github">Github</a></li>
       </ul>
     </nav>
   </header>
   <main>
-<!--     <section>    
-      <h2>Witaj</h2>
-      <p>12/12/12</p>
-      <hr>
-      <p>To jest treść główna.</p>
-      <br>
-      <hr>
-    </section> -->
-    <section>
+    <div class="section" id="about">
       <h2>O mnie</h2>
       <hr>
       <!-- <img src="images/background.jpeg"> -->
-      <p>Jestem studentem informatyki i pasjonatem programowania. Na tej stronie znajdziesz informacje o moich projektach oraz kontakt do mnie.</p>
-    </section>
-
-    <div class="projects">
-        <h2>Projekty</h2>
-        <hr>
-        
-        <!-- Projekt 1 -->
-        <div class="project">
-            <div class="thumbnail">
-                <img src="images/background.jpeg?text=A" alt="ATR">
-            </div>
-            <div class="content">
-                <a href="#" class="title">atramentowy.github.io</a>
-                <p class="date">28/07/2026</p>
-                <p class="description">Portfolio website built with HTML, CSS and JavaScript.</p>
-            </div>
-        </div>
-        
-        <!-- Projekt 2 -->
-        <div class="project">
-            <div class="thumbnail">
-                <img src="images/background.jpeg" alt="CC">
-            </div>
-            <div class="content">
-                <a href="#" class="title">CCraft</a>
-                <p class="date">28/07/2026</p>
-                <p class="description">Test test test test.</p>
-            </div>
-        </div>
-        
-        <!-- Projekt 3 -->
-        <div class="project">
-            <div class="thumbnail">
-                <img src="images/background.jpeg?text=W" alt="WB">
-            </div>
-            <div class="content">
-                <a href="#" class="title">WaffleBot</a>
-                <p class="date">00/00/0000</p>
-                <p class="description">Test test test test.</p>
-            </div>
-        </div>
-        
-        <!-- Projekt 4 -->
-        <div class="project">
-            <div class="thumbnail">
-                <img src="images/background.jpeg?text=H" alt="HD">
-            </div>
-            <div class="content">
-                <a href="#" class="title">Helpdesk App</a>
-                <p class="date">00/00/0000</p>
-                <p class="description">Test test test test.</p>
-            </div>
-        </div>
-        
-        <!-- Projekt 5 -->
-        <div class="project">
-            <div class="thumbnail">
-                <img src="images/background.jpeg?text=D" alt="DDPS">
-            </div>
-            <div class="content">
-                <a href="#" class="title">Distributed Data Processing System</a>
-                <p class="date">00/00/0000</p>
-                <p class="description">Test test test test.</p>
-            </div>
-        </div>
-    </div>
-
-
-    <section class="links" id="links">
-      <h2>Linki</h2>
-      <hr>
-      <ul>
-          <li>28/07/2026: <a href="">atramentowy.github.io</a></li>
-          <li>28/07/2026: <a href="">CCraft</a></li>
-          <li>00/00/0000: <a href="">WaffleBot</a></li>
-          <li>00/00/0000: <a href="">Helpdesk App</a></li>
-          <li>00/00/0000: <a href="">Distributed Data Processing System</a></li>
-      </ul>
-      <ul class="images">
-        <li data-tooltip="Helpdesk App - support system" data-img="https://via.placeholder.com/200x150/6a4a2a/white?text=Helpdesk">
-      </ul>
-    </section>
-
-    <section>
+      <p>Jestem studentem informatyki i pasjonatem programowania. Na tej stronie znajdziesz informacje o moich projektach.</p>
       <br>
-      <hr>
-      <p class="center">***</p>
-    </section>
-    <div class="tooltip" id="tooltip">
-        <img id="tooltipImg" src="" alt="">
-        <img src="images/background.jpeg" alt="Podgląd">
-        <div class="text" id="tooltipText"></div>
     </div>
-    <section>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </section>
+    <div class="section hidden" id="projects">
+      <div class="projects">
+          <h2>Projekty</h2>
+          <hr>
+          
+          <!-- Projekt 1 -->
+          <div class="project">
+              <div class="thumbnail">
+                  <img src="images/atramentowy.jpeg" alt="atramentowy.github.io">
+              </div>
+              <div class="content">
+                  <a href="#" class="title">atramentowy.github.io</a>
+                  <p class="date">28/07/2026</p>
+                  <p class="description">Portfolio website built with HTML, CSS and JavaScript.</p>
+              </div>
+          </div>
+          
+          <!-- Projekt 2 -->
+          <div class="project">
+              <div class="thumbnail">
+                  <img src="images/ccraft.jpeg" alt="CCraft">
+              </div>
+              <div class="content">
+                  <a href="#" class="title">CCraft</a>
+                  <p class="date">28/07/2026</p>
+                  <p class="description">Simple minecraft clone written in C</p>
+              </div>
+          </div>
+          
+          <!-- Projekt 3 -->
+          <div class="project">
+              <div class="thumbnail">
+                  <img src="images/wafel.jpeg" alt="WaffleBot">
+              </div>
+              <div class="content">
+                  <a href="https://github.com/atramentowy/waffle-bot" target="_blank" class="title">WaffleBot</a>
+                  <p class="date">00/00/0000</p>
+                  <p class="description">Simple discord bot that plays music on voice channels written in python.</p>
+              </div>
+          </div>
+          
+          <!-- Projekt 4 -->
+          <div class="project">
+              <div class="thumbnail">
+                  <img src="images/background.jpeg?text=H" alt="HD">
+              </div>
+              <div class="content">
+                  <a href="#" class="title">Helpdesk App</a>
+                  <p class="date">00/00/0000</p>
+                  <p class="description">Simple helpdesk application written using html, css, js, mysql and php.</p>
+              </div>
+          </div>
+          
+          <!-- Projekt 5 -->
+          <div class="project">
+              <div class="thumbnail">
+                  <img src="images/background.jpeg?text=D" alt="DDPS">
+              </div>
+              <div class="content">
+                  <a href="#" class="title">Distributed Data Processing System</a>
+                  <p class="date">00/00/0000</p>
+                  <p class="description">Distributed data processing system written in python uses TCP sockets.</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="section hidden" id="resources">
+      <div class="links" id="links">
+        <h2>Linki</h2>
+        <hr>
+        <ul>
+            <li>28/07/2026: <a href="">atramentowy.github.io</a></li>
+            <li>28/07/2026: <a href="">CCraft</a></li>
+            <li>00/00/0000: <a href="">WaffleBot</a></li>
+            <li>00/00/0000: <a href="">Helpdesk App</a></li>
+            <li>00/00/0000: <a href="">Distributed Data Processing System</a></li>
+        </ul>
+        <ul class="images">
+          <li data-tooltip="Helpdesk App - support system" data-img="https://via.placeholder.com/200x150/6a4a2a/white?text=Helpdesk">
+        </ul>
+      </div>
+    </div>
+    <div id="spacer">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
   </main>
   <footer>
     <hr>
